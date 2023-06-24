@@ -1,3 +1,4 @@
+import argparse
 import cv2
 import numpy as np
 import os
@@ -5,8 +6,14 @@ from sort import sort
 from time import sleep
 
 
-file_path = "./dic.txt"
+# Get FilePath
+parser = argparse.ArgumentParser()
+parser.add_argument("-f", "--file", default="./dic/default.txt", help="file path")
+args = parser.parse_args()
+file_path = args.file
 
+
+# Load DicFile
 with open(file_path, "r") as f:
     dic_string = f.read()
 
