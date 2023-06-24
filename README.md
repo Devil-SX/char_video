@@ -10,11 +10,17 @@ Char Camera 字符摄像头
 
 <img src="./byx_dsc.png"  width="500px">
 
+# Features
+
+使用 [ANSI escape code](https://en.wikipedia.org/wiki/ANSI_escape_code) 完成屏幕光标移动
+
+用移动光标而不是清屏的方式刷新以避免闪屏
+
+    ANSI escape code 还支持颜色显示，还能用控制台播放视频，但这样做失去了绘制字符的意义
+
 # Get Started
 
 环境 `Ubuntu 22.04`
-
-*用了 os.system("clear") ，不知道在非bash环境下是否能直接用*
 
 (1) 安装 `opencv` 和 `numpy` 库
 
