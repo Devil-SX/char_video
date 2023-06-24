@@ -6,11 +6,11 @@ Char Camera 字符摄像头
 让摄像头输出在你的控制台！
 </p>
 
-用自定义的字符在控制台绘制酷酷的字符视频！
+用 **自定义的字符集** 在控制台绘制酷酷的字符视频！
 
 <img src="./byx_dsc.png"  width="500px">
 
-# Features
+# 原理
 
 使用 [ANSI escape code](https://en.wikipedia.org/wiki/ANSI_escape_code) 完成屏幕光标移动
 
@@ -47,8 +47,13 @@ pip install -r ./requirements.txt
 (4) 运行程序
 
 ```shell
-python ./main.py -f [your_dic_file_path]
+python run.py [-h] [-f FILE] [--frame FRAME]
 ```
 
-- `-f` 字典文件路径， 缺省则使用`/dic/default.txt`
+```
+options:
+  -h, --help            show this help message and exit
+  -f FILE, --file FILE  file path
+  --frame FRAME         max frame rate
+```
 

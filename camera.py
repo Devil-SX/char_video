@@ -48,10 +48,10 @@ class CharCamera:
         arr = self.get_dic_char_v(img_quantized)
 
         self.console.print_2D_array(arr)
-        sleep(0.01)
 
-    def start(self):
+    def start(self, frame_rate):
         while True:
+            sleep(1 / frame_rate)
             self.main_loop()
             if cv2.waitKey(1) == ord("q"):
                 break
